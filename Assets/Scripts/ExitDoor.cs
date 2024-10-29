@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ExitDoor : MonoBehaviour
 {
     private Animator animator;
-    public Text enterMaze;
+    //public Text enterMaze;
     public float timeRemaining = 10;
 
     void Start()
@@ -15,7 +15,7 @@ public class ExitDoor : MonoBehaviour
         animator.SetBool("CanClose", true);
 
         GameObject textObject = GameObject.Find("EnterMaze");
-        enterMaze = textObject.GetComponent<Text>();
+        //enterMaze = textObject.GetComponent<Text>();
     
     }
 
@@ -27,7 +27,7 @@ public class ExitDoor : MonoBehaviour
         }
         else
         {
-            enterMaze.text = "";
+            //enterMaze.text = "";
         }
     }
 
@@ -37,7 +37,7 @@ public class ExitDoor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             animator.SetBool("CanClose", false);
-            enterMaze.text = "Bienvenu, remplissez votre mission !";
+            //enterMaze.text = "Bienvenu, remplissez votre mission !";
             Debug.Log("Player has entered the trigger zone!");
         }
     }
